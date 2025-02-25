@@ -18,6 +18,7 @@ function NavBar() {
           <p onClick={() => navigate("/contact")}>Contact</p>
           <Link to="/login"><button className={styles.play}>Log In</button></Link>
         </div>
+
     </div>
   )
 }

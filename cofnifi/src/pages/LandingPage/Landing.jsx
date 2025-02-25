@@ -1,9 +1,52 @@
+import { useState } from "react"
 import styles from "./landing.module.css"
 import { Link } from 'react-router-dom'
+import "./landing.scss"
+import Typed from "typed.js";
+import { useRef } from "react";
+import { useEffect } from "react";
+
 
 function Landing() {
+    const [clicked, setClicked] = useState(false);
+    const typedRef = useRef(null);
+    const [showButtons, setShowButtons] = useState(false)
+
+    useEffect(() => {
+        if (clicked && typedRef.current) {
+          const typed = new Typed(typedRef.current, {
+            strings: [
+              "Greetings, human! I am Professor Brainstew! ",
+              "I am your brilliant guide on the journey to sharpening your mind",
+              "My brainpower is beyond measure!",
+              "While others let their brains turn to mush with endless scrolling, I prefer a more… stimulating approach.",
+              "With a mix of wisdom and just a dash of madness, I’ll help you train your brain and outthink the competition.",
+              "Forget the brain rot—it’s time to start thinking again!",
+              "Are you ready now?"
+            ],
+            typeSpeed: 40,
+            backSpeed: 15,
+            backDelay: 1000,
+            startDelay: 500,
+            loop: false,
+          });
+          setTimeout(() =>{
+            talky()
+          }, 44000)         
+
+          return () => {
+            typed.destroy();
+          };
+        }
+      }, [clicked]);
+
+      function talky(){
+        setShowButtons(true);
+      }
+
   return (
     <div className={styles.page}>
+
         <div className={styles.first}>
                 <div className={styles.box}>
                     <div className={styles.inside} >
@@ -69,10 +112,39 @@ function Landing() {
             </div>
         </div>
 
-        <div className={styles.second}>g</div>
+        <div className={styles.secondbackground}>
+        <div className={styles.second}>
+            <div>
+                <p className={styles.secondheader}>Professor Brainstew works for us and he takes a close interest in your gameplay</p>
+                <div className={styles.buttonbox}>
+                    <Link to="/signup"><button className={styles.secondbutton}>CHOOSE GAME</button></Link>
+                </div>
+            </div>
+            <div>
+                <img className={styles.secondimg} src="/landingpage/proff.png" alt="" />
+            </div>
+        </div>
+        </div>
 
-        <div className={styles.third}></div>
-
+        <div className={styles.thirdbackground}>
+        <div className={styles.third}>
+            <div className={styles.thirdimg}>
+                <img src="/landingpage/proff.png" alt="" />
+            </div>
+            <div className={styles.thirdbox}>
+                {clicked === false ? (<><p className={styles.thirdheader}>May I introduce myself?</p>
+                <div className={styles.buttonbox}>
+                <button className={styles.secondbutton} onClick={() => setClicked(true)}>YESSSS</button>
+                </div> </> ): (
+              <div className={styles.css_typing}>
+                <span ref={typedRef}></span>
+              </div>
+            )}
+            {showButtons && <div>
+                helllo</div>}
+            </div>
+        </div>
+        </div>
         <div className={styles.fourth}></div>
 
         <div className={styles.fifth}></div>
