@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "category": "MATH",
+        "description": "Addition",
+        "image": "/games/math/addition.png",
+        "link" : "/games/addition"
+    },
+    {
+        "id": 2,
+        "category": "Math",
+        "description": "Subtraction",
+        "image": "/games/math/subtraction.png",
+        "link" : "/games/subtraction"
+    },
+    {
+        "id": 3,
+        "category": "Math",
+        "description": "Multiplication",
+        "image": "/games/math/multiplication.png",
+        "link" : "/games/multiplication"
+    },
+    {
+        "id": 4,
+        "category": "Math",
+        "description": "Division",
+        "image": "/games/math/division.png",
+        "link" : "/games/division"
+    },
+    {
+        "id": 5,
+        "category": "Math",
+        "description": "Binary Conversion",
+        "image": "/games/math/multiplication.png",
+        "link" : "/games/binary"
+    },
+    {
+        "id": 6,
+        "category": "Spatial reasoning",
+        "description": "3D rotation",
+        "image": "",
+        "link" : "/games/3drotation"
+    },
+    {
+        "id": 7,
+        "category": "Flexibility",
+        "description": "Color and text match",
+        "image": "/games/math/multiplication.png",
+        "link" : "/games/colorandtextmatch"
+    }
+]

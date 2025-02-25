@@ -1,0 +1,23 @@
+.container {
+    display: flex; /* Paneb kolm peamist divi kõrvuti */
+    gap: 10px; /* Vahepealne tühik */
+    justify-items: center;
+    align-items: center;
+    justify-content: center; 
+}
+
+.column {
+    display: flex;
+    flex-direction: column; /* Sisu liigub vertikaalselt */
+
+    padding: 10px;
+    width: 150px; /* Võid muuta vastavalt vajadusele */
+}
+
+.column div {
+    padding: 5px;
+    margin: 5px 0; /* Tühik elementide vahel */
+}
+p{
+    cursor: pointer;
+}
