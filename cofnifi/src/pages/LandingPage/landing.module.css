@@ -15,7 +15,7 @@
     gap: 5em;
 
 }
-.first::before {
+/* .first::before {
     content: "";
     position: absolute;
     top: 7em;
@@ -25,7 +25,7 @@
     background-image: radial-gradient(rgba(181, 181, 181, 0.468) 1px, transparent 0);
     background-size: 2.5em 2.5em;
     background-position: -2em -2em;
-}
+} */
 .box{
     height: 37.5em;
     width: 26.25em;
@@ -90,7 +90,7 @@ transform-style: preserve-3d;
 
 
 }
-.secondbackground{
+/* .secondbackground{
     content: "";
     position: absolute;
     top: 62.5em;
@@ -103,7 +103,7 @@ transform-style: preserve-3d;
         rgb(38, 45, 51) 0.8em,
         rgb(38, 45, 51) 0.8em,
         rgb(38, 45, 51) 0.8em);
-}
+} */
 
 .secondheader{
     width: 23em;
